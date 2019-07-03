@@ -7,7 +7,10 @@ import { HotelService } from './services/hotel/hotel.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [
+    HotelService,
+  ]
 })
 export class AppComponent implements OnInit, OnDestroy {
   public hotels: any[] = [];
@@ -19,7 +22,6 @@ export class AppComponent implements OnInit, OnDestroy {
     this.hotelService.getHotels().pipe(
       takeUntil(this.unsubscribe),
     ).subscribe(response => {
-      console.log(response);
       this.hotels = response.results.hotels;
     })
   }
