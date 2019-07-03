@@ -1,7 +1,7 @@
 {
-  "name": "angularjs-frontend-homework",
-  "version": "1.0.0",
-  "description": "Public repository for frontend candidate homework",
+  "name": "rocketmiles-test",
+  "version": "0.1.0",
+  "description": "✨ An implementation of the take-home coding test for the Rocketmiles frontend engineer position ✨",
   "main": "webpack.config.js",
   "scripts": {
     "test": "karma start --single-run",
@@ -9,15 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rocketmiles/angularjs-frontend-homework.git"
+    "url": "git@github.com:dwilhel1/rocketmiles-test.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "dwilhel1@hawk.iit.edu",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rocketmiles/angularjs-frontend-homework/issues"
-  },
-  "homepage": "https://github.com/rocketmiles/angularjs-frontend-homework#readme",
+  "homepage": "https://dw-rocketmiles.herokuapp.com/",
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
