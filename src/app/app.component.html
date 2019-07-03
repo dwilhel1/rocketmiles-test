@@ -18,9 +18,9 @@
         </div>
       </div>
       <div>
-        <div ng-repeat="hotel in landingCtrl.hotels">
+        <div *ngFor="let hotel of hotels">
           <div class="hotel-list">
-            <img ng-src="{{ hotel.hotelStaticContent.mainImage.url }}" class="photo"/>
+            <img src="{{ hotel.hotelStaticContent.mainImage.url }}" class="photo"/>
             <div class="details">
               <div>
                   {{ hotel.hotelStaticContent.name }}
@@ -35,7 +35,7 @@
                     <span class="sub-text">miles</span>
                 </div>
                 <div class="cost">
-                    {{ hotel.lowestAveragePrice.amount | currency:undefined:0 }}
+                    {{ (hotel.lowestAveragePrice.amount | currency) || 0 }}
                     <div class="sub-text">per night</div>
                 </div>
                 <div class="btn">Select</div>
@@ -45,3 +45,5 @@
       </div>
     </div>
   </div>
+
+<router-outlet></router-outlet>
