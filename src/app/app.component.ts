@@ -8,9 +8,6 @@ import { HotelService } from './services/hotel/hotel.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [
-    HotelService,
-  ]
 })
 export class AppComponent implements OnInit, OnDestroy {
   public hotels: any[] = [];
