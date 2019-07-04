@@ -1,49 +1,32 @@
-<div class="app-container">
-    <div class="content">
-      <div class="filters">
-        <div class="filter-type">
-            <span>Hotel name</span>
-            <input type="text" maxlength="1">
-        </div>
-        <div class="filter-type">
-            <span>Price</span>
-            <select>
-              <option>Recommended</option>
-              <option>Price low-to-high</option>
-              <option>Price high-to-low</option>
-            </select>
-        </div>
-        <div class="filter-type">
-          <div class="btn reset">Reset</div>
-        </div>
-      </div>
-      <div>
-        <div *ngFor="let hotel of hotels">
-          <div class="hotel-list">
-            <img src="{{ hotel.hotelStaticContent.mainImage.url }}" class="photo"/>
-            <div class="details">
-              <div>
-                  {{ hotel.hotelStaticContent.name }}
-              </div>
-              <div class="sub-text">
-                  {{ hotel.hotelStaticContent.neighborhoodName }}
-              </div>
-            </div>
-            <div class="price">
-                <div class="rewards">
-                    {{ hotel.rewards.miles | number }}
-                    <span class="sub-text">miles</span>
-                </div>
-                <div class="cost">
-                    {{ (hotel.lowestAveragePrice.amount | currency) || 0 }}
-                    <div class="sub-text">per night</div>
-                </div>
-                <div class="btn">Select</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<mat-card>
+  <mat-card-title>Search</mat-card-title>
+  <mat-card-subtitle>Filter hotel results</mat-card-subtitle>
+  <mat-card-content>
+    <form class="flex flex-column" [formGroup]="hotelSearchFormGroup">
+      <mat-form-field [appearance]="'outline'" floatLabel="always">
+        <mat-label>Hotel name</mat-label>
+        <input matInput [type]="'text'" [placeholder]="'Search for hotel...'" [formControlName]="'hotelSearch'"/>
+      </mat-form-field>
+      <mat-form-field [appearance]="'outline'" floatLabel="always">
+        <mat-label>Price</mat-label>
+        <mat-select [placeholder]='"Price filter..."' [formControlName]="'currency'">
+          <mat-option [value]='"recommended"'>Recommended</mat-option>
+          <mat-option [value]='"asc"'>Price low-to-high</mat-option>
+          <mat-option [value]='"asc"'>Price high-to-low</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+    <button mat-raised-button [color]="'primary'" (click)="resetSearch()">Reset</button>
+  </mat-card-content>
+</mat-card>
 
-<router-outlet></router-outlet>
+<ng-container *ngIf="hotelResponse">
+  <mat-card *ngFor="let hotel of hotelResponse.results.hotels">
+    <img [src]="hotel.hotelStaticContent.mainImage.url"/>
+    <p>{{ hotel.hotelStaticContent.name }}</p>
+    <p>{{ hotel.hotelStaticContent.neighborhoodName }}</p>
+    <p>{{ hotel.rewards.miles | number }} miles</p>
+    <p>{{ hotel.lowestAveragePrice.amount | currency }} per night</p>
+    <button mat-raised-button [color]="'primary'">Select</button>
+  </mat-card>
+</ng-container>
