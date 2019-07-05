@@ -10,18 +10,18 @@
       <mat-form-field [appearance]="'outline'" floatLabel="always">
         <mat-label>Price</mat-label>
         <mat-select [placeholder]='"Price filter..."' [formControlName]="'currency'">
-          <mat-option [value]='"recommended"'>Recommended</mat-option>
-          <mat-option [value]='"desc"'>Price low-to-high</mat-option>
-          <mat-option [value]='"asc"'>Price high-to-low</mat-option>
+          <mat-option [value]='currencyEnum.RECOMMENDED' disabled>Recommended</mat-option>
+          <mat-option [value]='currencyEnum.DESC'>Price low-to-high</mat-option>
+          <mat-option [value]='currencyEnum.ASC'>Price high-to-low</mat-option>
         </mat-select>
       </mat-form-field>
     </form>
-    <button mat-raised-button [color]="'primary'" (click)="resetSearch()">Reset</button>
+    <button mat-raised-button [color]="'primary'" (click)="resetSearch()" [disabled]="!hotelSearchFormGroup.controls.currency.value && !hotelSearchFormGroup.controls.hotelSearch.value">Reset</button>
   </mat-card-content>
 </mat-card>
 
 <ng-container *ngIf="hotelResponse">
-  <mat-card *ngFor="let hotel of hotelResponse.results.hotels">
+  <mat-card *ngFor="let hotel of tableData.data">
     <img [src]="hotel.hotelStaticContent.mainImage.url" alt="hotel hero image"/>
     <p>{{ hotel.hotelStaticContent.name }}</p>
     <p>{{ hotel.hotelStaticContent.neighborhoodName }}</p>
