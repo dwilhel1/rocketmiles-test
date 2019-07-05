@@ -5,13 +5,13 @@
     <form class="flex flex-column" [formGroup]="hotelSearchFormGroup">
       <mat-form-field [appearance]="'outline'" floatLabel="always">
         <mat-label>Hotel name</mat-label>
-        <input matInput [type]="'text'" [placeholder]="'Search for hotel...'" [formControlName]="'hotelSearch'"/>
+        <input matInput [type]="'text'" [placeholder]="'Search for hotel...'" [formControlName]="'hotelSearch'" aria-label="hotel saearch"/>
       </mat-form-field>
       <mat-form-field [appearance]="'outline'" floatLabel="always">
         <mat-label>Price</mat-label>
         <mat-select [placeholder]='"Price filter..."' [formControlName]="'currency'">
           <mat-option [value]='"recommended"'>Recommended</mat-option>
-          <mat-option [value]='"asc"'>Price low-to-high</mat-option>
+          <mat-option [value]='"desc"'>Price low-to-high</mat-option>
           <mat-option [value]='"asc"'>Price high-to-low</mat-option>
         </mat-select>
       </mat-form-field>
@@ -22,7 +22,7 @@
 
 <ng-container *ngIf="hotelResponse">
   <mat-card *ngFor="let hotel of hotelResponse.results.hotels">
-    <img [src]="hotel.hotelStaticContent.mainImage.url"/>
+    <img [src]="hotel.hotelStaticContent.mainImage.url" alt="hotel hero image"/>
     <p>{{ hotel.hotelStaticContent.name }}</p>
     <p>{{ hotel.hotelStaticContent.neighborhoodName }}</p>
     <p>{{ hotel.rewards.miles | number }} miles</p>

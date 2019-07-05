@@ -20,14 +20,18 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private hotelService: HotelService) {}
 
   public ngOnInit(): void {
+    // Initialize formGroup instance
     this.hotelSearchFormGroup = new FormGroup({
       hotelSearch: new FormControl(''),
       currency: new FormControl(''),
     });
+
+    // Request list of hotels, subscribe to formGroup on success
     this.hotelService.getHotels().pipe(
       takeUntil(this.unsubscribe),
     ).subscribe((response: HotelResponse) => {
       this.hotelResponse = response;
+      this.onChanges();
     });
   }
 
@@ -37,7 +41,14 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   public resetSearch(): void {
-    console.log('Search has been reset');
     this.hotelSearchFormGroup.reset();
+  }
+
+  public onChanges(): void {
+    this.hotelSearchFormGroup.valueChanges.pipe(
+      takeUntil(this.unsubscribe),
+    ).subscribe(result => {
+      console.log(result);
+    });
   }
 }
