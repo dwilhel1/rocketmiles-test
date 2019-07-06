@@ -8,10 +8,12 @@ import { MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, Mat
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HotelCardComponent } from './components/hotel-card/hotel-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HotelCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+$mat-card-height: 180px;
+$image-max-height: 200px;
+$image-width: 160px;
+$image-border-radius: 10px;
+$image-background-color: lightgrey;
+$search-result-controls-width: 100px;
+
+mat-card.mat-card.search-result {
+  display: flex;
+  height: $mat-card-height;
+  padding: 0;
+}
+
+.search-result-controls {
+  width: $search-result-controls-width;
+}
+
+img {
+  width: $image-width;
+  max-height: $image-max-height;
+  border-radius: $image-border-radius 0 0 $image-border-radius;
+  background-color: $image-background-color;
+}

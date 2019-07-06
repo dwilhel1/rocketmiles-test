@@ -1,0 +1,16 @@
+<mat-card class="search-result">
+  <img [src]="hotel.hotelStaticContent.mainImage.url" alt="hotel hero image"/>
+  <div class="flex-grow-1 padding-m">
+    <p class="font-weight-500 padding-bottom-m">{{ hotel.hotelStaticContent.name }}</p>
+    <p>{{ hotel.hotelStaticContent.neighborhoodName }}</p>
+    <p>{{ hotel.hotelStaticContent.rating }} / 10</p>
+  </div>
+  <mat-divider vertical></mat-divider>
+  <div class="flex flex-wrap padding-m search-result-controls">
+    <p class="align-self-start">{{ hotel.rewards.miles | number }} miles</p>
+    <p class="align-self-center">{{ hotel.lowestAveragePrice.amount | currency }} per night</p>
+    <div class="align-self-end">
+      <button mat-raised-button [color]="'primary'">Select</button>
+    </div>
+  </div>
+</mat-card>
