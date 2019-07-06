@@ -1,0 +1,6 @@
+{
+    "baseUrl": "http://localhost:4200",
+    "env": {
+        "endpointServer": "https://homework-app.rocketmiles.com/fe-homework"
+    }
+}

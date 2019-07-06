@@ -1,0 +1,302 @@
+{
+  "success": true,
+  "results": {
+    "total": 20,
+    "hotels": [
+      {
+        "id": "907",
+        "rewards": {
+          "miles": 10000
+        },
+        "lowestAveragePrice": {
+          "currency": "USD",
+          "symbol": "&#36;",
+          "amount": 579
+        },
+        "hotelStaticContent": {
+          "hotelId": 907,
+          "languageCode": "en",
+          "mainImage": {
+            "category": "EXTERIOR",
+            "url": "http://d2whcypojkzby.cloudfront.net/imageRepo/2/0/68/56/314/ExteriorCarsGone_S.jpg",
+            "source": "SOURCE1"
+          },
+          "name": "Omni Chicago Hotel & Suites Magnificent Mile",
+          "neighborhoodName": "Magnificent Mile",
+          "address": {
+            "line1": "676 North Michigan Avenue",
+            "line2": null,
+            "city": "Chicago",
+            "stateName": "Illinois",
+            "stateCode": "IL",
+            "countryName": "United States",
+            "countryCode": "US",
+            "zipCode": "60611",
+            "latitude": 41.89475,
+            "longitude": -87.62465,
+            "timeZoneId": "America/Chicago"
+          },
+          "stars": 4,
+          "rating": 9,
+          "numberOfReviews": 685,
+          "brandCode": "1324",
+          "brandName": "Omni Hotels",
+          "propertyType": 204,
+          "propertyTypeName": "Hotel"
+        }
+      },
+      {
+        "id": "908",
+        "rewards": {
+          "miles": 8000
+        },
+        "lowestAveragePrice": {
+          "currency": "USD",
+          "symbol": "&#36;",
+          "amount": 234
+        },
+        "hotelStaticContent": {
+          "hotelId": 908,
+          "languageCode": "en",
+          "mainImage": {
+            "category": "EXTERIOR",
+            "url": "http://d2whcypojkzby.cloudfront.net/imageRepo/6/0/96/743/239/chidt-exterior-0227-hor-clsc_S.jpg",
+            "source": "SOURCE1"
+          },
+          "name": "Chicago Marriott Downtown Magnificent Mile",
+          "neighborhoodName": "Magnificent Mile",
+          "address": {
+            "line1": "540 North Michigan Avenue",
+            "line2": null,
+            "city": "Chicago",
+            "stateName": "Illinois",
+            "stateCode": "IL",
+            "countryName": "United States",
+            "countryCode": "US",
+            "zipCode": "60611",
+            "latitude": 41.89216,
+            "longitude": -87.62443,
+            "timeZoneId": "America/Chicago"
+          },
+          "stars": 4,
+          "rating": 8.5,
+          "numberOfReviews": 885,
+          "brandCode": "1080",
+          "brandName": "Marriott Hotels & Resorts",
+          "propertyType": 204,
+          "propertyTypeName": "Hotel"
+        }
+      },
+      {
+        "id": "87390",
+        "rewards": {
+          "miles": 12000
+        },
+        "lowestAveragePrice": {
+          "currency": "USD",
+          "symbol": "&#36;",
+          "amount": 123
+        },
+        "hotelStaticContent": {
+          "hotelId": 87390,
+          "languageCode": "en",
+          "mainImage": {
+            "category": "EXTERIOR",
+            "url": "http://d2whcypojkzby.cloudfront.net/imageRepo/1/0/16/99/327/012857_A_P.jpg",
+            "source": "SOURCE1"
+          },
+          "name": "Homewood Suites by Hilton Chicago-Lincolnshire",
+          "neighborhoodName": "Lincolnshire",
+          "address": {
+            "line1": "10 Westminster Way",
+            "line2": null,
+            "city": "Lincolnshire",
+            "stateName": "Illinois",
+            "stateCode": "IL",
+            "countryName": "United States",
+            "countryCode": "US",
+            "zipCode": "60069",
+            "latitude": 42.19918,
+            "longitude": -87.89188,
+            "timeZoneId": "America/Chicago"
+          },
+          "stars": 3,
+          "rating": 9.1,
+          "numberOfReviews": 110,
+          "brandCode": "1982",
+          "brandName": "Homewood Suites by Hilton",
+          "propertyType": 204,
+          "propertyTypeName": "Hotel"
+        }
+      },
+      {
+        "id": "40623",
+        "rewards": {
+          "miles": 5000
+        },
+        "lowestAveragePrice": {
+          "currency": "USD",
+          "symbol": "&#36;",
+          "amount": 987
+        },
+        "hotelStaticContent": {
+          "hotelId": 40623,
+          "languageCode": "en",
+          "mainImage": {
+            "category": null,
+            "url": "http://www.tnetnoc.com//hotelphotos/892/36892/2241284-The-Talbott-Hotel-Hotel-Exterior-1-DEF.jpg",
+            "source": "SOURCE2"
+          },
+          "name": "The Talbott Hotel",
+          "neighborhoodName": "Magnificent Mile",
+          "address": {
+            "line1": "20 E Delaware Place",
+            "line2": null,
+            "city": "Chicago",
+            "stateName": "Illinois",
+            "stateCode": "IL",
+            "countryName": "United States",
+            "countryCode": "US",
+            "zipCode": "60611",
+            "latitude": 41.89919,
+            "longitude": -87.62749,
+            "timeZoneId": "America/Chicago"
+          },
+          "stars": 4,
+          "rating": 9.2,
+          "numberOfReviews": 544,
+          "brandCode": "8127",
+          "brandName": "Joie De Vivre hotels",
+          "propertyType": 204,
+          "propertyTypeName": "Hotel"
+        }
+      },
+      {
+        "id": "1494414",
+        "rewards": {
+          "miles": 2000
+        },
+        "lowestAveragePrice": {
+          "currency": "USD",
+          "symbol": "&#36;",
+          "amount": 543
+        },
+        "hotelStaticContent": {
+          "hotelId": 1494414,
+          "languageCode": "en",
+          "mainImage": {
+            "category": null,
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/152433226.jpg?k=a5ee1404be7afa38a1fe08426ad6cc93d51c668e3a9991cbfa028a4d116257b1&o=",
+            "source": "SOURCE3"
+          },
+          "name": "Moxy Chicago Downtown",
+          "neighborhoodName": "Chicago",
+          "address": {
+            "line1": "530 North LaSalle Drive",
+            "line2": null,
+            "city": "Chicago",
+            "stateName": null,
+            "stateCode": null,
+            "countryName": "United States",
+            "countryCode": "US",
+            "zipCode": "60654",
+            "latitude": 41.89184,
+            "longitude": -87.63284,
+            "timeZoneId": "America/Chicago"
+          },
+          "stars": 3,
+          "rating": 9.1,
+          "numberOfReviews": 68,
+          "brandCode": "4128",
+          "brandName": "Moxy Hotels",
+          "propertyType": 204,
+          "propertyTypeName": "Hotel"
+        }
+      },
+      {
+        "id": "1678174",
+        "rewards": {
+          "miles": 12000
+        },
+        "lowestAveragePrice": {
+          "currency": "USD",
+          "symbol": "&#36;",
+          "amount": 432
+        },
+        "hotelStaticContent": {
+          "hotelId": 1678174,
+          "languageCode": "en",
+          "mainImage": {
+            "category": "GUEST_ROOM",
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/max500/151285370.jpg?k=5aafb6eba7f31f953550288801450c8cc3da8c8df7ce5e0b9608dc9178d4fa94&o=",
+            "source": "SOURCE3"
+          },
+          "name": "Aloft Chicago Mag Mile",
+          "neighborhoodName": "Chicago",
+          "address": {
+            "line1": "243 East Ontario Street",
+            "line2": null,
+            "city": "Chicago",
+            "stateName": null,
+            "stateCode": null,
+            "countryName": "United States",
+            "countryCode": "US",
+            "zipCode": "60611",
+            "latitude": 41.89315,
+            "longitude": -87.62134,
+            "timeZoneId": "America/Chicago"
+          },
+          "stars": 3,
+          "rating": 8.9,
+          "numberOfReviews": 92,
+          "brandCode": "2089",
+          "brandName": "Aloft",
+          "propertyType": 204,
+          "propertyTypeName": "Hotel"
+        }
+      },
+      {
+        "id": "36009",
+        "rewards": {
+          "miles": 4000
+        },
+        "lowestAveragePrice": {
+          "currency": "USD",
+          "symbol": "&#36;",
+          "amount": 678
+        },
+        "hotelStaticContent": {
+          "hotelId": 36009,
+          "languageCode": "en",
+          "mainImage": {
+            "category": "EXTERIOR",
+            "url": "http://d2whcypojkzby.cloudfront.net/imageRepo/3/0/48/737/959/ExteriorSunset2_S.jpg",
+            "source": "SOURCE1"
+          },
+          "name": "Wyndham Chicago O'Hare",
+          "neighborhoodName": "Des Plaines",
+          "address": {
+            "line1": "1450 East Touhy Ave",
+            "line2": null,
+            "city": "Des Plaines",
+            "stateName": "Illinois",
+            "stateCode": "IL",
+            "countryName": "United States",
+            "countryCode": "US",
+            "zipCode": "60018",
+            "latitude": 42.01021,
+            "longitude": -87.88671,
+            "timeZoneId": "America/Chicago"
+          },
+          "stars": 3,
+          "rating": 8.3,
+          "numberOfReviews": 345,
+          "brandCode": "1048",
+          "brandName": "Wyndham Hotels & Resorts",
+          "propertyType": 204,
+          "propertyTypeName": "Hotel"
+        }
+      }
+    ]
+  }
+}

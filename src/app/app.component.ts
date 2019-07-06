@@ -42,6 +42,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   public resetSearch(): void {
     this.hotelSearchFormGroup.reset();
+    if (this.hotelResponse) {
+      this.hotelSearchFormGroup.enable();
+    } else {
+      this.hotelSearchFormGroup.disable();
+    }
     this.configureTableData();
   }
 
@@ -81,7 +86,9 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private configureTableData(): void {
-    this.tableData = new MatTableDataSource(Array.from(this.hotelResponse.results.hotels));
+    if (this.hotelResponse && this.hotelResponse.results.hotels) {
+      this.tableData = new MatTableDataSource(Array.from(this.hotelResponse.results.hotels));
+    }
   }
 
   private sortData(key: CurrencyEnum): void {
