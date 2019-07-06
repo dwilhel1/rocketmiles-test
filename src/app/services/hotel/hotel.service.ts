@@ -1,7 +1,7 @@
-import { Injectable}  from '@angular/core';
+import { Injectable }  from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { HotelResponse } from '../../models/hotel/response/hotel.model';
 
@@ -16,14 +16,6 @@ export class HotelService {
 
     return this.http.get(url).pipe(
       map(data => new HotelResponse(data)),
-      catchError(this.handleError<HotelResponse>('getHotels', null)),
     );
-  }
-
-  private handleError<T> (operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(`${operation} failed: ${error.message}`);
-      return of(result as T);
-    };
   }
 }

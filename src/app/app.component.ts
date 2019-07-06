@@ -32,6 +32,7 @@ export class AppComponent implements OnInit, OnDestroy {
     });
 
     this.getHotels();
+    this.onChanges();
   }
 
   public ngOnDestroy(): void {
@@ -65,16 +66,13 @@ export class AppComponent implements OnInit, OnDestroy {
     this.hotelService.getHotels().pipe(
       takeUntil(this.unsubscribe),
     ).subscribe((response: HotelResponse) => {
-      if (response) {
-        this.hotelResponse = response;
-        this.configureTableData();
-        this.onChanges();
-      } else {
-        this.hotelSearchFormGroup.disable();
-      }
+      this.hotelResponse = response;
+      this.configureTableData();
+      this.resetSearch();
     }, () => {
-      const snackBarRef = this._snackBar.open('Error requesting hotels', 'Retry');
-      snackBarRef.onAction().pipe(
+      this.resetSearch();
+
+      this._snackBar.open('Error requesting hotels', 'Retry').onAction().pipe(
         takeUntil(this.unsubscribe),
       ).subscribe(() => {
         this.getHotels();

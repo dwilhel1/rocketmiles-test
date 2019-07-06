@@ -16,7 +16,8 @@
         </mat-select>
       </mat-form-field>
     </form>
-    <button mat-raised-button [color]="'primary'" (click)="resetSearch()" [disabled]="!hotelSearchFormGroup.controls.currency.value && !hotelSearchFormGroup.controls.hotelSearch.value">Reset</button>
+    <button mat-raised-button [matTooltip]="'Reset search criteria'" [color]="'primary'" (click)="resetSearch()" [disabled]="!hotelSearchFormGroup.controls.currency.value && !hotelSearchFormGroup.controls.hotelSearch.value">Reset</button>
+    <button mat-stroked-button [matTooltip]="'Refresh data from endpoint'" (click)="getHotels()">Refresh</button>
   </mat-card-content>
 </mat-card>
 
@@ -24,8 +25,9 @@
   <mat-card *ngFor="let hotel of tableData.data" class="search-result">
     <img [src]="hotel.hotelStaticContent.mainImage.url" alt="hotel hero image"/>
     <div class="flex-grow-1 padding-m">
-      <p class="font-weight-500">{{ hotel.hotelStaticContent.name }}</p>
+      <p class="font-weight-500 padding-bottom-m">{{ hotel.hotelStaticContent.name }}</p>
       <p>{{ hotel.hotelStaticContent.neighborhoodName }}</p>
+      <p>{{ hotel.hotelStaticContent.rating }} / 10</p>
     </div>
     <mat-divider vertical></mat-divider>
     <div class="flex flex-wrap padding-m search-result-controls">

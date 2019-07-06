@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatButtonModule, MatDividerModule } from '@angular/material';
+import { MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatButtonModule, MatDividerModule, MatTooltipModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +27,7 @@ import { AppComponent } from './app.component';
     ReactiveFormsModule,
     MatDividerModule,
     MatSnackBarModule,
+    MatTooltipModule,
   ],
   exports: [
     HttpClientModule,
@@ -40,6 +41,7 @@ import { AppComponent } from './app.component';
     ReactiveFormsModule,
     MatDividerModule,
     MatSnackBarModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [

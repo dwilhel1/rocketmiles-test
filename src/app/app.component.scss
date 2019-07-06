@@ -1,5 +1,6 @@
 $image-max-height: 200px;
 $image-width: 160px;
+$image-border-radius: 10px;
 $search-result-controls-width: 100px;
 $mat-card-height: 180px;
 $image-background-color: lightgrey;
@@ -10,10 +11,14 @@ mat-card.mat-card.search-result {
   padding: 0;
 }
 
+button.mat-stroked-button {
+  margin-left: 8px;
+}
+
 img {
   width: $image-width;
   max-height: $image-max-height;
-  border-radius: 10px 0 0 10px;
+  border-radius: $image-border-radius 0 0 $image-border-radius;
   background-color: $image-background-color;
 }
 
