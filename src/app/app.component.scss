@@ -9,7 +9,7 @@ mat-card.mat-card.search-result {
 }
 
 img {
-  width: $image-width;
+  max-width: $image-width;
   max-height: $image-max-height;
 }
 
