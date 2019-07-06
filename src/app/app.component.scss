@@ -1,12 +1,15 @@
+$image-dimension: 200px;
+$search-result-controls-width: 100px;
+
 mat-card.mat-card.search-result {
   display: flex;
 }
 
 img {
-  width: 200px;
-  max-height: 200px;
+  width: $image-dimension;
+  max-height: $image-dimension;
 }
 
 .search-result-controls {
-  width: 100px;
+  width: $search-result-controls-width;
 }

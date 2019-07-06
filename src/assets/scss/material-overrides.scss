@@ -1,0 +1,6 @@
+$mat-card-border-radius: 10px;
+
+mat-card.mat-card {
+  margin: $spacing-xl;
+  border-radius: $mat-card-border-radius;
+}

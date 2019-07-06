@@ -5,8 +5,4 @@
 @import 'base.scss';
 @import 'flex.scss';
 @import 'fonts.scss';
-
-mat-card.mat-card {
-  margin: 24px;
-  border-radius: 10px;
-}
+@import 'material-overrides.scss';
