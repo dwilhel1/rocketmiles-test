@@ -61,7 +61,7 @@ export class AppComponent implements OnInit, OnDestroy {
     });
   }
 
-  private getHotels(): void {
+  public getHotels(): void {
     // Request list of hotels, subscribe to formGroup on success
     this.hotelService.getHotels().pipe(
       takeUntil(this.unsubscribe),
