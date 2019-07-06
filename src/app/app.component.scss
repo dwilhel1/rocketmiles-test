@@ -1,8 +1,10 @@
 $image-dimension: 200px;
 $search-result-controls-width: 100px;
+$mat-card-height: 180px;
 
 mat-card.mat-card.search-result {
   display: flex;
+  height: $mat-card-height;
 }
 
 img {

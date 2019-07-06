@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subject} from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
@@ -21,7 +22,7 @@ export class AppComponent implements OnInit, OnDestroy {
   public hotelSearchFormGroup: FormGroup;
   private unsubscribe: Subject<void> = new Subject();
 
-  constructor(private hotelService: HotelService) {}
+  constructor(private hotelService: HotelService, private _snackBar: MatSnackBar) {}
 
   public ngOnInit(): void {
     // Initialize formGroup instance
@@ -30,18 +31,7 @@ export class AppComponent implements OnInit, OnDestroy {
       currency: new FormControl(''),
     });
 
-    // Request list of hotels, subscribe to formGroup on success
-    this.hotelService.getHotels().pipe(
-      takeUntil(this.unsubscribe),
-    ).subscribe((response: HotelResponse) => {
-      if (response) {
-        this.hotelResponse = response;
-        this.configureTableData();
-        this.onChanges();
-      } else {
-        this.hotelSearchFormGroup.disable();
-      }
-    });
+    this.getHotels();
   }
 
   public ngOnDestroy(): void {
@@ -67,6 +57,23 @@ export class AppComponent implements OnInit, OnDestroy {
       takeUntil(this.unsubscribe),
     ).subscribe(searchChanges => {
       this.filterData(searchChanges);
+    });
+  }
+
+  private getHotels(): void {
+    // Request list of hotels, subscribe to formGroup on success
+    this.hotelService.getHotels().pipe(
+      takeUntil(this.unsubscribe),
+    ).subscribe((response: HotelResponse) => {
+      if (response) {
+        this.hotelResponse = response;
+        this.configureTableData();
+        this.onChanges();
+      } else {
+        this.hotelSearchFormGroup.disable();
+      }
+    }, () => {
+      this._snackBar.open('Error requesting hotels', 'Retry');
     });
   }
 

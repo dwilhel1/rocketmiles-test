@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +26,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     ReactiveFormsModule,
     MatDividerModule,
+    MatSnackBarModule,
   ],
   exports: [
     HttpClientModule,
@@ -37,6 +39,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     ReactiveFormsModule,
     MatDividerModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [

@@ -20,7 +20,7 @@
   </mat-card-content>
 </mat-card>
 
-<ng-container *ngIf="tableData.data.length; else noResults">
+<ng-container *ngIf="tableData?.data?.length; else noResults">
   <mat-card *ngFor="let hotel of tableData.data" class="search-result">
     <img [src]="hotel.hotelStaticContent.mainImage.url" alt="hotel hero image"/>
     <div class="flex-grow-1 padding-x-l">
