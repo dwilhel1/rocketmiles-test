@@ -73,7 +73,12 @@ export class AppComponent implements OnInit, OnDestroy {
         this.hotelSearchFormGroup.disable();
       }
     }, () => {
-      this._snackBar.open('Error requesting hotels', 'Retry');
+      const snackBarRef = this._snackBar.open('Error requesting hotels', 'Retry');
+      snackBarRef.onAction().pipe(
+        takeUntil(this.unsubscribe),
+      ).subscribe(() => {
+        this.getHotels();
+      });
     });
   }
 

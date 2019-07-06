@@ -2,15 +2,19 @@ $image-max-height: 200px;
 $image-width: 160px;
 $search-result-controls-width: 100px;
 $mat-card-height: 180px;
+$image-background-color: lightgrey;
 
 mat-card.mat-card.search-result {
   display: flex;
   height: $mat-card-height;
+  padding: 0;
 }
 
 img {
-  max-width: $image-width;
+  width: $image-width;
   max-height: $image-max-height;
+  border-radius: 10px 0 0 10px;
+  background-color: $image-background-color;
 }
 
 .search-result-controls {
