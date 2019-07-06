@@ -1,23 +1,12 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-body {
-  margin: 0;
-  background: #DCDCDC;
-}
-
-img {
-  max-width: 100%;
-  max-height: 180px;
-}
+@import 'variables.scss';
+@import 'spacing.scss';
+@import 'base.scss';
+@import 'flex.scss';
+@import 'fonts.scss';
 
 mat-card.mat-card {
   margin: 24px;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-column {
-  flex-direction: column;
+  border-radius: 10px;
 }

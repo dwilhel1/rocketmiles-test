@@ -1,91 +1,12 @@
-/* .app-container {
-    font-family: Helvetica, Arial, sans-serif;
+mat-card.mat-card.search-result {
+  display: flex;
+}
 
-    .header {
-        padding: 20px;
-    }
+img {
+  width: 200px;
+  max-height: 200px;
+}
 
-    .content {
-        display: grid;
-        grid-template-columns: 20% 75%;
-        grid-column-gap: 20px;
-        padding: 20px;
-        background: #DCDCDC;
-
-        .btn {
-            background-color: #6DBA4A;
-            padding: 9px 0;
-            width: 130px;
-            text-align: center;
-            border-radius: 3px;
-            color: white;
-
-        }
-
-        .reset {
-            width: 100%;
-        }
-
-        .filters {
-            background: white;
-            padding: 15px;
-            max-height: 150px;
-
-            .filter-type {
-                padding: 10px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                select {
-                    width: 58%;
-                }
-            }
-        }
-
-        .hotel-list {
-            background: white;
-            display: grid;
-            grid-template-columns: 20% 1fr 20%;
-            margin-bottom: 10px;
-
-            .photo {
-                width: 100%;
-                height: 180px;
-            }
-
-            .details {
-                padding: 20px 0 0 15px;
-                background: #f9f9f9;
-
-                h1 {
-                    font-weight: 400;
-                    font-size: 16px;
-                }
-
-                .location {
-                    color: #DCDCDC;
-                    font-size: 14px;
-                }
-            }
-
-            .sub-text {
-                font-size: 11px;
-                color: #6D6D6D;
-            }
-
-            .price {
-                color: #6DBA4A;
-                padding-left: 15px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                border-left: 1px solid #DEDEDE;
-
-                .rewards {
-                    color: #08399c;
-                }
-            }
-        }
-    }
-} */
+.search-result-controls {
+  width: 100px;
+}

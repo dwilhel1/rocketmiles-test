@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-title>Search</mat-card-title>
-  <mat-card-subtitle>Filter hotel results</mat-card-subtitle>
+  <mat-card-subtitle>Filter hotel results {{ hotelResponse?.results?.hotels?.length ? '(' + hotelResponse?.results?.hotels?.length + ')' : '' }}</mat-card-subtitle>
   <mat-card-content>
     <form class="flex flex-column" [formGroup]="hotelSearchFormGroup">
       <mat-form-field [appearance]="'outline'" floatLabel="always">
@@ -20,13 +20,24 @@
   </mat-card-content>
 </mat-card>
 
-<ng-container *ngIf="hotelResponse">
-  <mat-card *ngFor="let hotel of tableData.data">
+<ng-container *ngIf="tableData.data.length; else noResults">
+  <mat-card *ngFor="let hotel of tableData.data" class="search-result">
     <img [src]="hotel.hotelStaticContent.mainImage.url" alt="hotel hero image"/>
-    <p>{{ hotel.hotelStaticContent.name }}</p>
-    <p>{{ hotel.hotelStaticContent.neighborhoodName }}</p>
-    <p>{{ hotel.rewards.miles | number }} miles</p>
-    <p>{{ hotel.lowestAveragePrice.amount | currency }} per night</p>
-    <button mat-raised-button [color]="'primary'">Select</button>
+    <div class="flex-grow-1 padding-x-l">
+      <p class="font-weight-500">{{ hotel.hotelStaticContent.name }}</p>
+      <p>{{ hotel.hotelStaticContent.neighborhoodName }}</p>
+    </div>
+    <mat-divider vertical></mat-divider>
+    <div class="flex flex-wrap padding-left-l search-result-controls">
+      <p class="align-self-start">{{ hotel.rewards.miles | number }} miles</p>
+      <p class="align-self-center">{{ hotel.lowestAveragePrice.amount | currency }} per night</p>
+      <div class="align-self-end">
+        <button mat-raised-button [color]="'primary'">Select</button>
+      </div>
+    </div>
   </mat-card>
 </ng-container>
+
+<ng-template #noResults>
+    <p class="text-align-center">No hotel results</p>
+</ng-template>
